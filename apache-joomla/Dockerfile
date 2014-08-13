@@ -6,6 +6,7 @@ RUN apt-get install -y git
 
 RUN git clone https://github.com/joomla/joomla-cms.git /tmp/www
 
+RUN rm -rf /var/www/html/*
 RUN cp -r /tmp/www/* /var/www/html/
 RUN chown www-data:www-data /var/www/html -R
 RUN a2enmod rewrite
