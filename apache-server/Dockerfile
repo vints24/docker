@@ -2,6 +2,8 @@ FROM ubuntu
 
 MAINTAINER Gerben Jongerius <g.jongerius@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update && apt-get install -y mysql-server apache2 supervisor
 
 RUN apt-get install -y php5 php5-imap php5-mcrypt php5-gd php5-curl php5-mysql php-pear
